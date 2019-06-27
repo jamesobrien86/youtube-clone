@@ -2,9 +2,14 @@ import React from 'react';
 import YoutubeItem from './YoutubeItem';
 
 const YoutubeList = ({videos, onSelectVideo}) => {
-
-   const renderedList = videos.map(video => {
-        return <YoutubeItem onSelectVideo={onSelectVideo} video={video} />
+   const renderedList = videos.map((video,i) => {
+      return(
+            <YoutubeItem 
+                key={i} 
+                onSelectVideo={onSelectVideo} 
+                video={video} 
+            />
+      )
     })
 
 
