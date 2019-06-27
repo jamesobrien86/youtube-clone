@@ -1,10 +1,10 @@
 import React from 'react';
 import YoutubeItem from './YoutubeItem';
 
-const YoutubeList = ({videos}) => {
+const YoutubeList = ({videos, onSelectVideo}) => {
 
    const renderedList = videos.map(video => {
-        return <YoutubeItem  video={video} />
+        return <YoutubeItem onSelectVideo={onSelectVideo} video={video} />
     })
 
 

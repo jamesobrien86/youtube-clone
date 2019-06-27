@@ -7,7 +7,8 @@ import YoutubeList from './YoutubeList';
 class App extends React.Component{
 
     state = {
-        videos:[]
+        videos:[],
+        selectedVideo:null,
     }
 
     onTermSubmit = async term => {
@@ -19,11 +20,15 @@ class App extends React.Component{
         this.setState({videos:response.data.items})
     };
 
+    onSelectVideo = (video) => {
+        console.log('from the app', video)
+    }
+
     render(){
         return(
             <div className="ui container">
                 <SearchBar onTermSubmit={this.onTermSubmit} />
-                <YoutubeList videos={this.state.videos} />
+                <YoutubeList onSelectVideo={this.onSelectVideo} videos={this.state.videos} />
             </div>            
         )
     }

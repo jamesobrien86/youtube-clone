@@ -1,0 +1,14 @@
+.youtube-item{
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+.youtube-item.item img{
+    max-width: 120px;
+}
+.youtube-item{
+    
+}
+.youtube-item{
+    
+}
